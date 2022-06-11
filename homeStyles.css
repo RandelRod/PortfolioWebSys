@@ -1,0 +1,197 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(View.jpg);
+    font-family: 'Ubuntu', sans-serif;
+    color: rgba(255, 255, 255, 1);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header{
+    padding: 30px 0;
+    background-color: rgba(64, 62, 61, 1);
+    position: fixed;
+    width: 100%;
+}
+
+.navToggle{
+    display: none;
+}
+
+.navToggleLabel{
+    display: flex;
+    position:absolute;
+    top: 0;
+    height: 100%;
+    align-items: center;
+    margin-left: 1em;
+}
+
+.navToggleLabel span,
+.navToggleLabel span::before,
+.navToggleLabel span::after {
+    background: white;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+}
+
+.navToggleLabel span::before,
+.navToggleLabel span::after{
+    content: '';
+    position: absolute;
+}
+
+.navToggleLabel span::before{
+    bottom: 10px;
+}
+
+.navToggleLabel span::after{
+    top: 10px;
+}
+
+nav{
+    position: absolute;
+    top: 60px;
+    display: none;
+    background-color: rgba(64, 62, 61, 1);
+    width: 100%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-left: 1em;
+}
+
+nav li{
+    margin-bottom: 1em;
+}
+
+nav a{
+    text-decoration: none;
+    font-size: 2rem;
+    color: rgba(217, 217, 217, 1);
+}
+
+
+
+.navToggle:checked ~ nav{
+    display:block;
+}
+
+.home-BG{
+    padding: 10em 2em;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1{
+    
+    font-size: 3em;
+    text-align: center;
+    /*color: rgba(48, 36, 27, 1);*/
+    
+}
+.home-container{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.home-container{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 100px 20px;
+    background-color: rgba(8, 8, 8, 0.55);
+    border-radius: 40px;
+}
+
+.home-content{
+    margin: 0 auto;
+}
+
+.home-content p{
+    margin-top: 1em;
+    font-size: 1.5rem;
+    line-height: 1.4em;
+}
+
+.headerTop{
+    width: 100%;
+}
+
+
+@media (min-width: 600px) {
+    .navToggleLabel{
+        display: none;
+    }
+
+    header{
+        padding: 0px;
+    }
+
+    nav{
+        display: block;
+        position: static;
+        padding: .5em 0;
+        
+    }
+    nav ul{
+        display: flex;
+        margin: 0;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 0;
+        border-radius: 50px;
+        padding: .2em .2em;
+    }
+
+    nav a{
+        font-size: 1rem;
+        padding: 5px 20px;
+    }
+
+    nav a:hover{
+        background-color: rgba(189, 189, 189, 1);
+        border-radius: 30px;
+        padding: 5px 20px;
+        color: rgba(65, 66, 65, 1);
+    }
+
+    .home-container{
+        margin: 0 1em;
+        text-align: center;
+    }
+    
+    .home-container{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .home-content{
+        margin: 0 3em;
+    }
+
+    .home-content h1{
+        font-size: 4rem;
+    }
+    
+    .home-content p{
+        margin-top: 1em;
+        font-size: 2.4rem;
+        line-height: 1.4em;
+    }
+
+
+}
+
+
